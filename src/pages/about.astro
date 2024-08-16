@@ -1,7 +1,29 @@
+---
+const pageTitle = "about me";
+
+const identiry = {
+  firstName: "莎拉",
+  country: "加拿大",
+  occupation: "技术撰稿人",
+  hobbies: ["摄影", "观鸟", "棒球"],
+}
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+---
+<style>
+  body {
+    background-color: aqua;
+  }
+</style>
+
 <body>
+
   <a href="/">index</a>
   <p></p>
   <a href="/about/"></a>
-  <h1>about me</h1>
-  <h2>about my astor website</h2>
+  <h1>{pageTitle}</h1>
+  <ul>
+    {skills.map((skill) => <li>{skill}</li>)}
+  </ul>
+
 </body>
